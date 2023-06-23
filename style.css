@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-size: 24px;
+    overflow-x: hidden; 
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.padding_top_bottom {
+    padding: 20px 0 20px 0;
+}
+
+.container {
+    min-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+}
+
+.position_right {
+    flex-direction: row-reverse;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-center{
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.d_block {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
+/* header */
+
+.header {
+
+}
+
+    .list__nav {
+
+    }
+
+    .ip {
+        
+    }
+    
+        .ip__item {
+            
+        }
+
+        .ip__button {
+            
+        }
+
+
+    .logo {
+
+    }
+
+
+/* navigator */
+
+    .navigator {
+
+    }
+
+        .navigator__item {
+
+        }
+
+        .navigator__item_man {
+
+        }
+
+        .navigator__item_women {
+
+        }
+
+        .navigator__item_children {
+
+        }
+
+    .navigator__buttom {
+
+    }
+
+    .user-main {
+
+    }
+
+        .user-main__item {
+            
+        }
+
+            .navigator__buttom_about_shop {
+
+            }
+
+            .navigator__buttom_account_bar {
+
+            }
+    
+   
+/* main */
+
+.main__container {
+
+}
+
+.title__h2 {
+
+}
+
+    .firstPage {
+
+    }
+
+        .update-clothes__list {
+            
+        }
+
+            .update-clothes__item {
+
+            }
+
+/* footer */
+
+.footer {
+
+}
