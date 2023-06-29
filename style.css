@@ -35,7 +35,7 @@ p {
 }
 
 .container {
-    min-width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 10px 0 10px;
 }
@@ -147,7 +147,9 @@ p {
    
 /* main */
 
-.main__container {
+    /* firstPage */
+
+.firstPage {
 
 }
 
@@ -155,7 +157,7 @@ p {
 
 }
 
-    .firstPage {
+    .update-clothes {
 
     }
 
@@ -167,8 +169,91 @@ p {
 
             }
 
+    .sports {
+
+    }
+
+        .sports__list {
+            
+        }
+
+            .sports__item {
+
+            }
+
+    .reviews {
+        
+    }
+
+        .reviews__list {
+
+        }
+
+            .reviews__item {
+                border: 1px solid #000;
+            }
+
+                .user-name__reviews {
+
+                }
+
+                .text__rewiews {
+
+                }
+        /* reviews-form */
+
+        .reviews-form {
+
+        }
+
+            .reviews-form__list {
+
+            }
+
+                .reviews-form__item {
+
+                }
+
+                    .reviews-form__name_input {
+
+                    }
+
+                    .reviews-form__name_textarea {
+                        
+                }
+            .close-reviews-form {
+
+            }
 /* footer */
 
 .footer {
 
 }
+
+    .footer-container {
+        
+    }
+
+        .footer-section {
+
+        }
+
+            .footer-title {
+
+            }
+            
+            .footer-list {
+
+            }
+
+            .footer-item {
+
+            }
+
+            .footer-link {
+
+            }
+            
+        .paragraf {
+
+        }
