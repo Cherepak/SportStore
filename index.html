@@ -9,13 +9,24 @@
     <title>SportStore</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header container">
         <h1 class="sr-only">
             SportStore
         </h1>
 
         
         <ul class="ip flex flex-center position_right padding_top_bottom ">
+           
+
+            <li class="ip__item">
+                <a 
+                class="ip__button tel"
+                href="mailto:mailorganization@mail.ru"
+                target="_blank">
+                mailorganization@mail.ru
+                </a>
+            </li>
+
             <li class="ip__item">
                 <a 
                 class="ip__button tel"
@@ -26,26 +37,22 @@
             </li>
 
             <li class="ip__item">
-                <button class="ip__button">
-                    Город
-                </button>
-            </li>
-
-            <li class="ip__item">
-                <button class="ip__button">
-                    Магазины
+                <button class="ip__button ip__button_market">
+                    МАГАЗИНЫ
                 </button>
             </li>           
         </ul>
         
-        <span class="d_block line">
+        <span class="d_block line container">
 
         </span>
 
         <nav class="navigator flex flex-center space-between padding_top_bottom ">
-            <!-- <img class="logo" src="/..." alt="логотип"/> -->
+            <div class="logo-wrapper">
+                    <img class="logo" src="./image/logo.svg" alt="логотип"/>
+            </div>
 
-            <ul class="navigator flex flex-center space-between">
+            <ul class="navigator__list flex flex-center space-between">
                 <li class="navigator__item navigator__item_man">
                 <button class="navigator__button">
                         МУЖЧИНАМ
@@ -60,7 +67,7 @@
 
                 <li class="navigator__item navigator__item_children">
                     <button class="navigator__button">
-                        ДЕТЯМ 
+                        СПОРТИВНЫЙ ИНВЕНТАРЬ
                     </button>
                 </li>
                 
@@ -73,22 +80,24 @@
 
             <ul class="user-main flex flex-center space-between">
                 <li class="user-main__item">
-                    <button class="navigator__button navigator__button_account_bar">
-                        Личный кабинет
+                    <button class="navigator__button user-main_mod navigator__button_search">
+                        
+                    </button>
+                </li>
+
+                <li class="user-main__item">
+                    <button class="navigator__button user-main_mod navigator__button_account_bar">
+                     
                     </button>
                 </li>
         
                 <li class="user-main__item">
-                    <button class="navigator__button navigator__button_busket">
-                        КОРЗИНА
+                    <button class="navigator__button user-main_mod navigator__button_busket">
+                  
                     </button>
                 </li>
             </ul>
         </nav>
-
-        <span class="d_block line">
-
-        </span>
     </header>
 
     <main class="main">
