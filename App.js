@@ -1,9 +1,9 @@
 import React from "react";
 import {createRoot} from "react-dom/client";
 
-import Slider from "./swiper";
+import Slider from "./publick/swiper";
 
-import FirstPage from "./scripts/FirstPage"
+import FirstPage from "./publick/modules/FirstPage"
 
 
 class App extends React.Component {

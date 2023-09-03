@@ -16,11 +16,11 @@ export default class Slider extends React.Component {
                 slidesPerView={1}
                 >
                 <SwiperSlide>
-                    <img className="slide" src="\image\slider\slide1.jpg" alt="slide"/>
+                    <img className="slide" src="/publick/image/slider/slide1.jpg" alt="slide"/>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img className="slide" src="\image\slider\slide2.jpg" alt="slide"/>
+                    <img className="slide" src="publick/image/slider/slide1.jpg" alt="slide"/>
                 </SwiperSlide>
             </Swiper>
         )

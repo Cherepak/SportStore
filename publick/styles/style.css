@@ -27,6 +27,61 @@ a:focus {
     cursor: pointer;
 }   
 
+.button {
+    --color: #000000;
+    font-family: inherit;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color);
+    background-color: #fff;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 3px;
+    font-weight: 500;
+    color: var(--color);
+    left: 50%;
+    margin-left: -4em;
+   }
+   
+   .button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 500px;
+    border-radius: 50%;
+   }
+   
+   .button:hover {
+    color: #fff;
+   }
+   
+   .button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .button:hover:before {
+    top: -60px;
+    left: -60px;
+   }
+   
+   .button:active:before {
+    color: #000;
+    background: #ffffff;
+    transition: background 0s;
+   }
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -79,7 +134,7 @@ a:focus {
 
 .line {
     width: 100%;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #0000002c;
 }
 
 /* header */
@@ -124,7 +179,7 @@ a:focus {
     }
 
         .logo {
-
+            width: 250px
         }
 
 
@@ -208,7 +263,7 @@ a:focus {
 }
 
 .title__h2 {
-
+    font-size: 32px;
 }
 
     .update-clothes {
@@ -347,7 +402,7 @@ a:focus {
 
     .reviews {
         padding: 30px 0;
-        background-color: #f4f4f4;
+        /* background-color: #f4f4f4; */
     }
 
         .reviews__list {
@@ -355,40 +410,116 @@ a:focus {
         }
 
             .reviews__item {
-                border: 1px solid #000;
+                margin-top: 50px;
+                border-bottom: 1px solid #0000002c;
+                border-top: 1px solid #0000002c;
+                padding: 50px 0;
+                text-align: center;
             }
 
-                .user-name__reviews {
+            .reviews__wrapper {
+                width: 500px;
+                margin: 0 auto;
+                background-color: #fff;
+            }
 
-                }
+                    .rewiews__type {
+                        display: block;
+                        font-weight: 700;
+                    }
 
-                .text__rewiews {
+                    .reviews__user-name {
+                        display: block;
+                    }
 
-                }
+                    .rewiews__text {
+                        display: block;
+                    }
+
+                    .text__rewiews {
+                        display: block;
+                    }
+
+                    .rewiews__date {
+                        display: block;
+                        font-size: 14px;
+                        margin-top: 30px;
+                    }
         /* reviews-form */
 
         .reviews-form {
 
         }
 
-            .reviews-form__list {
+        .reviews-form__wrapper {
+            padding: 50px 30px;
+            align-items: center;
 
-            }
+        }
+        .form__group {
+            position: relative;
+            padding: 20px 0 0;
+          }
 
-                .reviews-form__item {
+          .form__group:not(:last-child) {
+            margin-bottom: 30px;
+          }
 
-                }
+          .form__field {
+            font-family: inherit;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #000000;
+            outline: 0;
+            font-size: 17px;
+            color: #000000;
+            padding: 7px 0;
+            background: transparent;
+            transition: border-color 0.2s;
+          }
+          
+          .form__field::placeholder {
+            color: transparent;
+          }
+          
+          .form__field:placeholder-shown ~ .form__label {
+            font-size: 17px;
+            cursor: text;
+            top: 20px;
+          }
+          
+          .form__label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: 0.2s;
+            font-size: 17px;
+            color: #acacac;
+            pointer-events: none;
+          }
+          
+          .form__field:focus {
+            padding-bottom: 6px;
 
-                    .reviews-form__name_input {
+            border-width: 1px;
+            border-image: linear-gradient(to right, #000000, #000000);
+            border-image-slice: 1;
+          }
+          
+          .form__field:focus ~ .form__label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: 0.2s;
+            font-size: 17px;
+            color: #000000;
 
-                    }
-
-                    .reviews-form__name_textarea {
-                        
-                }
-            .close-reviews-form {
-
-            }
+          }
+          
+          /* reset input */
+          .form__field:required, .form__field:invalid {
+            box-shadow: none;
+          }
 /* footer */
 
 .footer {

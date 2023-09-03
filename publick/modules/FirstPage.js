@@ -325,21 +325,42 @@ export default function FirstPage () { // add style in file style.css
     }
     //Эта функция перебирает массив с отзывами и выводит его 
     function Reviews () {
-        let map = reviews.map((item,index,array) => {
-            return <li key={item["id"]}>
-                <span>
-                    {item["name"]}
-                </span>
-                <p>
-                    {item['text']}
-                </p>
-                <span>
-                    {item['date']}
-                </span>
-            </li>
-        })
-        console.log()
-        return map
+
+        let arr = [];
+        let a = -1;
+        for (let i = 6; i <= reviews.length; i++) {
+           a++
+            
+            arr.push(
+                <SwiperSlide className="reviews__item" key={reviews[a]["id"]}>
+                   <div className="reviews__wrapper">
+                        <span className="rewiews__type">Имя:</span>
+
+                        <span className="reviews__user-name margin-top-10">
+                            {reviews[a]["name"]}
+                        </span>
+
+                        <span className="rewiews__type margin-top-10">Комментраий:</span>
+                        
+                        <p className="rewiews__text margin-top-10">
+                             {reviews[a]['text']}
+                        </p>
+
+                        <span className="rewiews__date">
+                            {reviews[a]['date']}
+                        </span>
+                   </div>
+                </SwiperSlide>
+            ) 
+        }
+       return (
+       <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        slidesPerView={1}
+        navigation
+        loop={true}>
+            {arr}
+       </Swiper>)
     }
 
     return <div className="firstPage"> 
@@ -418,57 +439,33 @@ export default function FirstPage () { // add style in file style.css
                 Отзывы
             </h2>
 
-            <ul>
+            <ul className="reviews__list space-between">
                 <Reviews className='container'/>
             </ul>
+
             
-            {/* <ul className="reviews__list flex space-between">
-                <li className="reviews__item">
-                    <span className="user-name__reviews"> name user</span>
-                    <p className="text__rewiews">
-                        text reviews   
-                    </p>
-                </li>
-
-                <li className="reviews__item">
-                    <span className="user__reviews"> name user</span>
-                    <p className="text__rewiews">
-                        text reviews   
-                    </p>
-                </li>
-
-                <li className="reviews__item">
-                    <span className="user__reviews"> name user</span>
-                    <p className="text__rewiews">
-                        text reviews   
-                    </p>
-                </li>
-            </ul> */}
-
-            <button onClick={() => {
+            <button className='button' onClick={() => {
               
 
-            }}> Оставить отзыв</button>
+            }}> ВСЕ ОТЗЫВЫ</button>
 
-                <form id="reviews-form">
-                    <ul className="reviews-form__list">
-                        <li className="reviews-form__item">
-                            <input 
-                            className="reviews-form__name_input" 
-                            type="text" 
-                            name="user" 
-                            placeholder="Ваше имя"/>
-                        </li>
+                <form className="reviews-form">
+                    <div className="reviews-form__wrapper container ">
+                        <div class="form__group field">
+                            <input type="text" className="form__field" placeholder="Name" required=""/>
+                            <label  className="form__label">Имя</label>
+                        </div>
 
-                        <li className="reviews-form__item">
-                            <textarea 
-                            className="reviews-form__name_textarea" 
-                            name="reviews" 
-                            placeholder="Отзыв"></textarea>
-                        </li>
-                    </ul>
+                        <div class="form__group field">
+                            <textarea type="text" className="form__field" placeholder="Name" required=""/>
+                            <label className="form__label">Комментарий</label>
+                        </div>
+                    </div>
+                    
+                    <button className="button" onClick={() => {
+                    
 
-                    <button className="close-reviews-form">Закрыть блок с отзывом</button>
+                    }}> ОСТАВИТЬ ОТЗЫВ</button>
                 </form>
         </section>
     </div>
